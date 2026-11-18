@@ -17,7 +17,7 @@ export function buildClipboardText(prompt: string, markdown: string): string {
 
 export function buildFilename(title: string): string {
   const base = title
-    .replace(/[\/:*?"<>|\u0000-\u001f]/g, " ")
+    .replace(/[\\/:*?"<>|\u0000-\u001f]/g, " ")
     .replace(/\s+/g, " ")
     .trim()
     .slice(0, 80)
